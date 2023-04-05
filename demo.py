@@ -213,7 +213,7 @@ class Recognizer(object):
                 if result:
                     print(f"Frame {count}: {result}")
 
-                
+
                 annotated_frame = self.draw_result(frame, result)
                 output_filename = f"output_frame_{count}.jpg"
                 cv2.imwrite(output_filename, annotated_frame)
@@ -256,7 +256,7 @@ class Recognizer(object):
                             cv2.imwrite(out_file, drawn_image)
 
 
-  
+
 
 
 def get_argparse():
@@ -288,3 +288,4 @@ if __name__ == '__main__':
         d.start_capture(opt.video_file, save_video, detect_freq=1, vis=True)
     else:
         d.detect_image_dir(opt.image_dir, out_dir=opt.out_dir)
+
